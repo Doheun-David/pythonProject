@@ -22,9 +22,19 @@ phone_number2 = phone_number1.replace(" ", "")
 print(phone_number2)
 
 # 문제 27
+url = "http://sharebook.kr"
+print(url[17:19])
 
 # 문제 28
-
+lang = 'python'
+lang[0] = 'P'
+print(lang)
 # 문제 29
+string = "abcdfe2a354a32a"
+string1 = string.replace("a", "A")
+print(string1)
 
-# 문제 30
+# 문제 30 예상 : 소문자 b가 대문자 B로 바뀔것으로 예상된다.
+string0 = 'abcd'
+string0.replace('b', 'B')
+print(string)
