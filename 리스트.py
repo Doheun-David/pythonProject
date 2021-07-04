@@ -228,25 +228,25 @@ sfs = input()
 print(sfs*2)
 
 # 문제 112번
-drf = input("하나의 숫자 입력 : ")
+drf = int(input("하나의 숫자 입력 : "))
 print(drf+10)
 
 # 문제 113번
-wrwr = input("하나의 숫자 입력 : ")
+wrwr = int(input("하나의 숫자 입력 : "))
 if wrwr%2==0:
     print("짝수")
 else:
     print("홀수")
 
 # 문제 114번
-wtwt = input("하나의 숫자 입력 : ")
+wtwt = int(input("하나의 숫자 입력 : "))
 if wtwt+20<=255:
     print(wtwt+20)
 elif wtwt+20>255:
     print(255)
 
 # 문제 115번
-fd = input("하나의 숫자 입력 : ")
+fd = int(input("하나의 숫자 입력 : "))
 if fd-20<0:
     print(0)
 elif fd-20>=0:
@@ -255,8 +255,8 @@ elif fd-20>255:
     print(255)
 
 # 문제 116번
-yy = input("현재 시간 입력(분단위로) : ")
-if yy%60==0:
+yy = input("현재 시간 입력 : ")
+if yy[3] == "00":
     print("정각입니다")
 else:
     print("정각이 아닙니다")
@@ -291,8 +291,19 @@ elif iiii == -3:
 
 # 문제 119번
 날씨 = {"봄":"딸기", "여름":"토마토", "가을":"사과"}
+dfdf = input("제가 좋아하는 계절은 : ")
+if dfdf in 날씨.keys():
+    print("정답입니다")
+else:
+    print("오답입니다")
 
 # 문제 120번
+날씨 = {"봄":"딸기", "여름":"토마토", "가을":"사과"}
+tttt = input("좋아하는 과일은? ")
+if tttt in 날씨.values():
+    print("정답입니다")
+else:
+    print("오답입니다")
 
 # 문제 121번
 vvv = input("문자 한개 입력 : ")
@@ -302,3 +313,77 @@ else:
     print(lower(vvv))
 
 # 문제 122번
+uyuy = int(input("점수 입력 : "))
+if uyuy <=20:
+    print("grade is E")
+elif 21<=uyuy<=40:
+    print("grade is D")
+elif 41<=uyuy<=60:
+    print("grade is C")
+elif 61<=uyuy<=80:
+    print("grade is B")
+elif 81<=uyuy<=100:
+    print("grade is A")
+
+# 문제 123번
+oooooo = input("통화명 입력 : ")
+yyyy = int(input("입력 : "))
+if oooooo == "달러":
+    oooooo = 1167
+elif oooooo == "엔":
+    oooooo = 1.096
+elif oooooo == "유로":
+    oooooo = 1268
+elif oooooo == "위안":
+    oooooo = 171
+print(oooooo*yyyy)
+
+# 문제 124번
+e1 = int(input("number1 : "))
+e2 = int(input("number2 : "))
+e3 = int(input("number3 : "))
+pop = [e1, e2, e3]
+print(max(pop))
+
+# 문제 125번
+bnbn = input("전화번호 입력 : ")
+if bnbn[0:3] == "011":
+    print("당신은 SKT 사용자 입니다")
+elif bnbn[0:3] == "016":
+    print("당신은 KT 사용자 입니다")
+elif bnbn[0:3] == "019":
+    print("당신은 LGU 사용자 입니다")
+elif bnbn[0:3] == "010":
+    print("알수없음")
+
+# 문제 126번
+tyty = int(input("우편번호 입력 : "))
+if tyty[0:3] == 0 or 1 or 2:
+    print("강북구")
+elif tyty[0:3] == 3 or 4 or 5:
+    print("도봉구")
+elif tyty[0:3] == 6 or 7 or 8 or 9:
+    print("노원구")
+
+# 문제 127번
+ddr = input("주민등록번호 입력 : ")
+if ddr[7] == "1" or "3":
+    print("남자")
+elif ddr[7] == "2" or "4":
+    print("여자")
+
+# 문제 128번
+vvc = input("주민등록 번호 입력 : ")
+if 0 <= int(vvc[8:10]) <=8:
+    print("서울입니다")
+else :
+    print("서울이 아닙니다")
+
+# 문제 129번
+nmnm = input("주민등록번호 입력 : ")
+if int(nmnm[13]) == 11-(int(nmnm[12])*2+int(nmnm[12])*3+int(nmnm[12])*4+int(nmnm[12])*5+int(nmnm[12])*6+int(nmnm[12])*7+int(nmnm[12])*8+int(nmnm[12])*9+int(nmnm[12])*2+int(nmnm[12])*3+int(nmnm[12])*4+int(nmnm[12])*5%11):
+    print("유효한 주민등록번호 입니다")
+else:
+    print("유효하지 않은 주민등록번호 입니다")
+
+# 문제 130번
